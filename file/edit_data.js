@@ -15,5 +15,4 @@ var sql_insert = function(data){
         console.log("1 record inserted");
     });
 }
-client.end();
 module.exports = sql_insert;
