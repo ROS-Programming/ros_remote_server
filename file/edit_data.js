@@ -8,14 +8,12 @@ var sql_insert = function(data, agg_active){
     else{
         var active_data = 1;
     }
-    console.log(data, agg_active, active_data);
-    console.log(typeof(data), typeof(agg_active), typeof(active_data))
-    client.query('UPDATE bmokey SET name = ?, active = ? WHERE id = 4',[data, active_data], function(err, result){
+    client.query('UPDATE bmokey SET name = ?, active = ? WHERE id = 4',["A", 0], function(err, result){
         if (err){
             throw err;
         }
         else{
-        console.log("1 record inserted");
+            console.log("1 record inserted");
         }
     });
     return active_data;
