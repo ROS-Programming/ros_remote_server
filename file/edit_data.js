@@ -8,24 +8,16 @@ var sql_insert = function(data, agg_active){
     else{
         var active_data = 1;
     }
-    /*
-    client.query('UPDATE bmokey SET name = "A", active = 0 WHERE id = 4', function(err, result){
+    client.query('UPDATE bmokey SET name = "W", active = 0 WHERE id = 4', function(err, result){
         if (err){
+            console.log("db error");
             throw err;
         }
         else{
             console.log("1 record inserted");
         }
     });
-    */
-    client.query('INSET INTO bmokey(name, active) VALUES("D", 0)', function(err, result){
-        if (err){
-            throw err;
-        }
-        else{
-            console.log("1 record inserted");
-        }
-    });
+    console.log("check");
     return active_data;
 }
 module.exports = sql_insert;
