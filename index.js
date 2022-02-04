@@ -7,13 +7,13 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 app.engine('html',require('ejs').renderFile);
 const port = process.env.PORT || 3000;
+var agg_active_data = 0;
 
 app.get('/', async(req, res) => {
     res.render(__dirname + '/index.html');
 });
 app.post('/', (req, res) => {
     console.log(req.body.key);
-    const agg_active_data = 0;
     console.log("check3");
     agg_active_data = edit_data(req.body.key, agg_active_data);
     console.log("check2");
