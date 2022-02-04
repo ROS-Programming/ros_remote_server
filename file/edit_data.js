@@ -14,5 +14,6 @@ var sql_insert = function(data, agg_active){
         }
         console.log("1 record inserted");
     });
+    return active_data;
 }
 module.exports = sql_insert;

@@ -1,6 +1,6 @@
 const express = require('express');
 var edit_data = require('./file/edit_data.js');
-
+const agg_active_data = 0;
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -14,7 +14,7 @@ app.get('/', async(req, res) => {
 });
 app.post('/', (req, res) => {
     console.log(req.body.key);
-    edit_data(req.body.key);
+    agg_active_data = edit_data(req.body.key, agg_active_data);
     res.redirect('/');
 });
 app.listen(port, () => {
