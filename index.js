@@ -1,6 +1,6 @@
 const express = require('express');
 var edit_data = require('./file/edit_data.js');
-const agg_active_data = false;
+const agg_active_data = 0;
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());

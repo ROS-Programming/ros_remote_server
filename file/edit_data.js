@@ -2,11 +2,11 @@ const mysql = require('mysql');
 const client = require('./config/db.config.js');
 
 var sql_insert = function(data, agg_active){
-    if (agg_active == true){
-        var active_data = false;
+    if (agg_active == 1){
+        var active_data = 0;
     }
     else{
-        var active_data = true;
+        var active_data = 1;
     }
     console.log(data, agg_active, active_data);
     console.log(typeof(data), typeof(agg_active), typeof(active_data))
