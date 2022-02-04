@@ -14,6 +14,7 @@ app.get('/', async(req, res) => {
 app.post('/', (req, res) => {
     console.log(req.body.key);
     const agg_active_data = 0;
+    console.log("check3");
     agg_active_data = edit_data(req.body.key, agg_active_data);
     console.log("check2");
     res.redirect('/');
