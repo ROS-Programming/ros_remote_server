@@ -15,7 +15,7 @@ app.get('/', async(req, res) => {
 app.post('/', function(req, res) {
     //gg_active_data = edit_data(req.body.key, agg_active_data);
     return res.json({key: req.body.key});
-    //res.redirect('/');
+    res.redirect('/');
 });
 app.listen(port, () => {
     console.log("Server Start");
