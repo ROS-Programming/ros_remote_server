@@ -13,7 +13,6 @@ app.get('/', async(req, res) => {
     res.render(__dirname + '/index.html');
 });
 app.post('/', (req, res) => {
-    console.log(req.body.key);
     agg_active_data = edit_data(req.body.key, agg_active_data);
     res.redirect('/');
 });
