@@ -1,5 +1,6 @@
 const express = require('express');
 var edit_data = require('./file/edit_data.js');
+const client = require('./file/config/db.config.js');
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -13,7 +14,7 @@ app.get('/', async(req, res) => {
     res.render(__dirname + '/index.html');
 });
 app.post('/', function(req, res) {
-    //agg_active_data = edit_data(req.body.key, agg_active_data);
+    agg_active_data = edit_data(req.body.key, agg_active_data, client);
     console.log("key", req.body.key);
     res.redirect('/');
 });

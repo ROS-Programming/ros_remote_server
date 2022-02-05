@@ -1,7 +1,6 @@
 const mysql = require('mysql');
-const client = require('./config/db.config.js');
 
-var sql_insert = function(data, agg_active){
+var sql_insert = function(data, agg_active, client){
     if (agg_active == 1){
         var active_data = 0;
     }
