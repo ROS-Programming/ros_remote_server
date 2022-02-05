@@ -13,7 +13,8 @@ app.get('/', async(req, res) => {
     res.render(__dirname + '/index.html');
 });
 app.post('/', function(req, res) {
-    agg_active_data = edit_data(req.body.key, agg_active_data);
+    //agg_active_data = edit_data(req.body.key, agg_active_data);
+    console.log(req.body.key);
     res.redirect('/');
 });
 app.listen(port, () => {
