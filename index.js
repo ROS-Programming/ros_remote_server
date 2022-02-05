@@ -13,8 +13,7 @@ app.get('/', async(req, res) => {
     res.render(__dirname + '/index.html');
 });
 app.post('/', function(req, res) {
-    //gg_active_data = edit_data(req.body.key, agg_active_data);
-    return res.json({key: req.body.key});
+    agg_active_data = edit_data(req.body.key, agg_active_data);
     res.redirect('/');
 });
 app.listen(port, () => {
