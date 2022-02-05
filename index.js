@@ -14,7 +14,7 @@ app.get('/', async(req, res) => {
 });
 app.post('/', function(req, res) {
     //agg_active_data = edit_data(req.body.key, agg_active_data);
-    console.log(req.body.key);
+    console.log("key", req.body.key);
     res.redirect('/');
 });
 app.listen(port, () => {
