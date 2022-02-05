@@ -1,17 +1,12 @@
 const mysql = require('mysql');
 
 var sql_insert = function(data, agg_active, client){
-    if (agg_active == 1){
-        var active_data = 0;
-    }
-    else{
-        var active_data = 1;
-    }
-    client.query('UPDATE bmokey SET name = ?, active = ? WHERE id = 4', [data, active_data], function(err, result){
+    agg_active+=1;
+    client.query('UPDATE bmokey SET name = ?, active = ? WHERE id = 4', [data, agg_active], function(err, result){
         if (err){
             throw err;
         }
     });
-    return active_data;
+    return agg_active;
 }
 module.exports = sql_insert;
